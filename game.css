@@ -34,17 +34,17 @@
     background-color: #dc3545;
 }
 
-#hud{
+#page{
     display: flex;
     justify-content: space-between;
 }
 
-.hud-prefix{
+.page-prefix{
     text-align: center;
     font-size: 2rem;
 }
 
-.hud-main-text{
+.page-main-text{
     text-align: center;
 }
 
