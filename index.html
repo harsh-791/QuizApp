@@ -1,18 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Quick Quiz</title>
-    <link rel="stylesheet" href="home.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div id="home" class="flex-center flex-column">
-        <h1>Quick Quiz</h1>
-        <a class="btn" href="/game.html">Play</a>
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Quiz App</h1>
+        <div id="timer" class="timer"></div>
+        <div id="progress-bar" class="progress-bar"></div>
+        <div id="question" class="question"></div>
+        <div id="options" class="options"></div>
+        <div class="controls">
+            <button id="prev" disabled>Previous</button>
+            <button id="next">Next</button>
+        </div>
+        <div id="result" class="result"></div>
+        <button id="show-leaderboard" class="show-leaderboard">Show Leaderboard</button>
     </div>
-  </body>
+    <div id="start-screen" class="start-screen">
+        <h2>Welcome to the Quiz!</h2>
+        <p>You have 30 seconds per question. Good luck!</p>
+        <label for="difficulty">Select difficulty:</label>
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+        <label for="username">Enter your name:</label>
+        <input type="text" id="username" placeholder="Your name">
+        <button id="start-btn">Start Quiz</button>
+    </div>
+    <div id="feedback" class="feedback"></div>
+    <div id="leaderboard" class="leaderboard">
+        <h2>Leaderboard</h2>
+        <ul id="leaderboard-list"></ul>
+        <button id="close-leaderboard">Close</button>
+    </div>
+    <div id="review-screen" class="review-screen">
+        <h2>Review Your Answers</h2>
+        <div id="review-questions"></div>
+        <button id="close-review">Close Review</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
